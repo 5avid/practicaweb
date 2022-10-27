@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .links {
+            background-color: black;
+            width: 30%; 
+            height: 400px; 
+            float: left; 
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .content {
+            height: 400px; 
+            width: 70%; 
+            float: left; 
+            border: none
+        }
+        .links a {
+            color: white;  
+            box-sizing: border-box;
+            display: block;
+            padding: 10px;
+        }
+        .links a:hover {
+            background-color: blueviolet;
+        }
+
+        @media all and (max-width: 600px) {		/*finestra petita*/
+		.links {
+			width: 100%;	/* que ocupin tot l’ample */
+			height: auto;	/* alçada automàtica */
+			clear: left;	/* els blocs no estan un devora */
+						    /* de l’altre			     */
+		}
+
+		.links a {
+			float: left; 	/* ara els links es mostren */
+						    /* a la mateixa línia       */
+		}
+	
+		.content {
+			width: 100%;	    /* l’iframe ocupa tot l’ample */
+			clear: left;	/* no comparteix espai amb    */
+ 					        /* els links			   */
+		}
+}    
+    </style>
+</head>
+<body>
+   <div style="background-color: wheat; height: 150px; width: 100%;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMIdEDQu0GlWCDO3C5pmdPiVUGBegKrwKQcA&usqp=CAU" style="float: left; height: 100px; width: 100px; padding: 25px; ">
+        <p style="color: white; vertical-align: middle; line-height: 150px; font-size: 50px;">VALVERDE</p>
+
+</div>
+<div class="links">
+    <a href="sites/site1.html" target="finestra1">INICIO</a>
+    
+    <a href="https://es.wikipedia.org/wiki/Federico_Valverde" target="finestra1">Wikipedia</a>
+    
+    <a href="https://www.youtube.com/embed/JJCODz_ig_M" target="finestra1">Goles y skills</a>
+    
+    <a href="https://www.infobae.com/america/deportes/2019/04/12/la-historia-de-federico-valverde-la-joya-del-futbol-uruguayo-como-se-gesto-su-llegada-al-real-madrid-con-16-anos/" target="finestra1" style="color: white;">Sus inicios</a>
+  
+    <a>
+    <audio controls autoplay loop>
+		<source src="../media/¡QUÉ SALVAJADA_ El tremendo golazo de Valverde ante el Sevilla narrado por Manolo Lama_V5McYwL8Nxw.mp3" type=”audio/mp3”>
+	</audio>
+    </a>
+
+</div>
+<iframe class="content" src="sites/site1.html" name="finestra1"></iframe>
+
+</body>
+</html>
